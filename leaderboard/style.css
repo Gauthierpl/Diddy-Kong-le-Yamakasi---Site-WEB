@@ -1,0 +1,131 @@
+/* Style général : thème sombre avec des touches rétro */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #121212;
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style des containers de map */
+.map-container {
+    background-color: #222;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #00ff00;
+}
+
+/* ID de la map centré avec effet néon */
+.map-id {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff007f;
+    text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 15px #ff007f;
+    margin-bottom: 20px;
+}
+
+/* Mise en page des éléments : image et classement côte à côte */
+.map-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Image avec bordure rétro */
+.map-content img {
+    width: 50%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border: 3px solid #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Classement avec fond noir et bordures vertes */
+.map-info {
+    width: 45%;
+    padding-left: 20px;
+    background-color: #1e1e1e;
+    border: 2px solid #00ff00;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Table du classement avec bordure rétro */
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #00ff00;
+}
+
+.leaderboard table, .leaderboard th, .leaderboard td {
+    border: 2px solid #00ff00;
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 8px;
+    text-align: left;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.leaderboard th {
+    background-color: #333;
+}
+
+.leaderboard tr:nth-child(even) {
+    background-color: #262626;
+}
+
+/* Effet de défilement */
+.leaderboard {
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+/* Effet de hover sur les lignes */
+.leaderboard tr:hover {
+    background-color: #00ff00;
+    color: #000;
+}
+
+/* Animations rétro pour les éléments */
+@keyframes neon {
+    0% { text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 15px #ff007f; }
+    50% { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00; }
+    100% { text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 15px #ff007f; }
+}
+
+.map-id {
+    animation: neon 1.5s ease-in-out infinite;
+}
+
+
+/* Personnalisation des scrollbars */
+::-webkit-scrollbar {
+    width: 12px; /* Largeur de la scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #121212; /* Fond de la scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff007f; /* Couleur de la barre de défilement */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff66b2; /* Couleur au survol */
+}
+
