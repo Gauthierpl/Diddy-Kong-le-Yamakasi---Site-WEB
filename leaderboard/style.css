@@ -129,3 +129,30 @@ body {
     background-color: #ff66b2; /* Couleur au survol */
 }
 
+
+/* Mode responsive : Sur les écrans de moins de 768px, on passe en colonne */
+@media screen and (max-width: 768px) {
+    .map-content {
+        flex-direction: column; /* Change l'affichage en colonne */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .map-content img {
+        width: 100%; /* L'image prend toute la largeur */
+        height: auto; /* Hauteur automatique pour garder les proportions */
+        max-height: none; /* Supprime la limite de hauteur */
+        object-fit: contain; /* Affiche toute l’image sans recadrage */
+    }
+
+    .map-info {
+        width: 100%; /* Le classement prend aussi toute la largeur */
+        padding-left: 0; /* Supprime l'espace à gauche */
+        margin-top: 15px; /* Ajoute un petit espace entre l'image et le classement */
+    }
+
+    .leaderboard {
+        max-height: 250px; /* Ajuste la hauteur max du scroll pour s'adapter */
+    }
+}
+
+
