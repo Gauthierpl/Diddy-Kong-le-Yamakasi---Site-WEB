@@ -1,6 +1,6 @@
 <?php
 // Inclure la connexion à la base de données
-include('../JeuXML/con.php');
+include('conLeaderboard.php');
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +10,8 @@ include('../JeuXML/con.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
     <link rel="stylesheet" href="style.css">
+    
+
 </head>
 <body>
 

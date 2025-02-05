@@ -4,14 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const leaderboardContainer = document.getElementById("leaderboard-container");
 
     function fetchMaps() {
-        const creator = creatorFilter.value;
-        const player = playerFilter.value;
+        const creator = encodeURIComponent(creatorFilter.value);
+        const player = encodeURIComponent(playerFilter.value);
 
         fetch(`load_maps.php?creator=${creator}&player=${player}`)
             .then(response => response.text())
             .then(data => {
                 leaderboardContainer.innerHTML = data;
-            });
+            })
+            .catch(error => console.error("Erreur de chargement des maps:", error));
     }
 
     function fetchFilters() {
@@ -31,7 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     option.textContent = player.username;
                     playerFilter.appendChild(option);
                 });
-            });
+            })
+            .catch(error => console.error("Erreur de chargement des filtres:", error));
     }
 
     creatorFilter.addEventListener("change", fetchMaps);

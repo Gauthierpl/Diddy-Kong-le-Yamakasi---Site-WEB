@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+
+
+/* Forcer VT323 sur tout le site */
+* {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+
+
+
+
 /* Style général : thème sombre avec des touches rétro */
 body {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'IBM Plex Mono', monospace;
     background-color: #121212;
     color: #00ff00;
     margin: 0;
@@ -76,7 +89,6 @@ body {
 .leaderboard th, .leaderboard td {
     padding: 8px;
     text-align: left;
-    font-family: 'Press Start 2P', cursive;
 }
 
 .leaderboard th {
@@ -138,13 +150,11 @@ body {
 
 .filters label {
     font-size: 14px;
-    font-family: 'Press Start 2P', cursive;
     color: #ff007f;
     text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f;
 }
 
 .filters select {
-    font-family: 'Press Start 2P', cursive;
     background-color: #1e1e1e;
     color: #00ff00;
     border: 3px solid #ff007f;
@@ -166,7 +176,6 @@ body {
 .filters select option {
     background-color: #1e1e1e;
     color: #00ff00;
-    font-family: 'Press Start 2P', cursive;
 }
 
 /* ---- STYLE AU CLIC ---- */
