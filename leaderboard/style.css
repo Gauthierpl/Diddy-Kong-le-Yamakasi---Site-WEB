@@ -262,7 +262,82 @@ body {
         box-shadow: 0 0 5px #ff007f;
     }
 
+    /*CHAT DE MAP*/
+        /*CHAT DE MAP*/
+    /*CHAT DE MAP*/
 
+    .chat-button {
+        background-color: #00ff00;
+        color: #000;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+        margin-left: 10px;
+    }
+    
+    .chat-button:hover {
+        background-color: #66ff66;
+        box-shadow: 0 0 5px #00ff00;
+    }
+    #messages-container {
+        background-color: #1e1e1e;
+        border: 2px solid #00ff00;
+        padding: 10px;
+        border-radius: 10px;
+        max-height: 300px;
+        overflow-y: auto;
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+    
+    .message {
+        background-color: #222;
+        padding: 8px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        border-left: 3px solid #ff007f;
+    }
+    
+    .message p {
+        margin: 0;
+        color: #00ff00;
+    }
+    
+    .msg-time {
+        color: #ff007f;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    
+    #chat-form {
+        margin-top: 15px;
+    }
+    
+    #chat-form textarea {
+        width: 100%;
+        background-color: #1e1e1e;
+        color: #00ff00;
+        border: 2px solid #ff007f;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    #chat-form button {
+        margin-top: 10px;
+        background-color: #ff007f;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    #chat-form button:hover {
+        background-color: #ff66b2;
+        box-shadow: 0 0 5px #ff007f;
+    }
+    
 
 
 

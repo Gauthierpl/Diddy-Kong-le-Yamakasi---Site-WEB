@@ -18,9 +18,17 @@ foreach ($maps as $map_id => $map): ?>
         <div class="map-header">
             <div class="map-id"><?= htmlspecialchars($map['map_id']); ?></div>
             
+            <!-- Bouton "Modifier" pour les admins -->
             <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
                 <a href="modifier_map.php?map_id=<?= $map['map_id']; ?>" class="edit-button">
                     Modifier
+                </a>
+            <?php endif; ?>
+
+            <!-- Bouton "Discussion" pour les joueurs -->
+            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'player'): ?>
+                <a href="discussion_map.php?map_id=<?= $map['map_id']; ?>" class="chat-button">
+                    Discussion
                 </a>
             <?php endif; ?>
         </div>
