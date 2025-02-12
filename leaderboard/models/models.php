@@ -1,6 +1,6 @@
 <?php
 // Inclure la connexion à la base de données
-include('../conLeaderboard.php');
+include('conLeaderboard.php');
 
 /**
  * Récupère les maps filtrées par créateur et joueur

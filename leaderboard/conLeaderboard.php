@@ -1,5 +1,5 @@
 <?php
-$config = include('../../config.php'); // Inclure le fichier sécurisé
+$config = include('config.php'); // Inclure le fichier sécurisé
 
 
 
