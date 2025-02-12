@@ -1,8 +1,7 @@
 <?php
 include('conLeaderboard.php');
 include('models/models.php');
-
-
+session_start();
 
 $creator = $_GET['creator'] ?? '';
 $player = $_GET['player'] ?? '';
@@ -10,16 +9,22 @@ $player = $_GET['player'] ?? '';
 // Étape 1 : Récupérer les maps filtrées
 $filteredMapIds = getFilteredMaps($conn, $creator, $player);
 
-
 // Étape 2 : Charger les classements des maps filtrées
 $maps = getLeaderboardMaps($conn, $filteredMapIds);
-
-
 
 // Génération du HTML sécurisé
 foreach ($maps as $map_id => $map): ?>
     <div class="map-container">
-        <div class="map-id"><?= htmlspecialchars($map['map_id']); ?></div>
+        <div class="map-header">
+            <div class="map-id"><?= htmlspecialchars($map['map_id']); ?></div>
+            
+            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+                <a href="modifier_map.php?map_id=<?= $map['map_id']; ?>" class="edit-button">
+                    Modifier
+                </a>
+            <?php endif; ?>
+        </div>
+
         <div class="map-content">
             <img src="<?= htmlspecialchars("https://gauthierpl.fr/JeuXML/" . ltrim($map['screenshot'], '/')); ?>" alt="Map Image">
             <div class="map-info">
