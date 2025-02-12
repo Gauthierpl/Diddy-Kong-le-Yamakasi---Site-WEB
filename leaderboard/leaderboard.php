@@ -1,6 +1,5 @@
 <?php
-// Inclure la connexion à la base de données
-include('conLeaderboard.php');
+include('conLeaderboard.php'); // Inclure la connexion à la base de données
 ?>
 
 <!DOCTYPE html>
@@ -9,14 +8,30 @@ include('conLeaderboard.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
-    <link rel="stylesheet" href="style.css">
-    
-
+    <link rel="stylesheet" href="style.css"> <!-- Ton fichier de style -->
 </head>
 <body>
 
+<?php include('header.php'); ?> 
+<!-- Ton header, qui gère le bouton Se Connecter / Se Déconnecter / admin ... -->
+
 <div class="container">
     <h1>Leaderboard des Maps</h1>
+
+    <!-- Messages différents selon le rôle de l'utilisateur -->
+    <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+        <p style="color: #ff007f;">
+            Ici, tu peux gérer les temps, supprimer des maps, etc. (admin seulement)
+        </p>
+    <?php elseif (isset($_SESSION['role']) && $_SESSION['role'] === 'player'): ?>
+        <p style="color: #00ff00;">
+            Ici, tu vois un contenu réservé aux joueurs connectés (mais pas admin).
+        </p>
+    <?php else: ?>
+        <p>
+            Tu es invité, connecte-toi pour accéder à plus de fonctionnalités.
+        </p>
+    <?php endif; ?>
 
     <!-- Filtres -->
     <div class="filters">
@@ -40,6 +55,5 @@ include('conLeaderboard.php');
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
