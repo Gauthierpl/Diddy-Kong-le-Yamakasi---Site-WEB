@@ -1,0 +1,147 @@
+/* forum.css */
+
+/* Container global pour le forum */
+.forum-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #121212; /* même fond sombre que le site */
+    color: #00ff00; /* vert néon par défaut */
+}
+
+/* Alertes de succès / erreur */
+.forum-alert {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.forum-alert.success {
+    border: 2px solid #00ff00;
+    color: #00ff00;
+}
+.forum-alert.error {
+    border: 2px solid #ff007f;
+    color: #ff007f;
+}
+
+/* Création d'un nouveau topic */
+.forum-new-topic {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border: 2px solid #ff007f;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.forum-new-topic label {
+    color: #ff007f;
+}
+.forum-new-topic input[type="text"] {
+    width: 50%;
+    background-color: #222;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    padding: 5px;
+    border-radius: 5px;
+}
+.forum-new-topic button {
+    background-color: #ff007f;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.forum-new-topic button:hover {
+    background-color: #ff66b2;
+    box-shadow: 0 0 5px #ff007f;
+}
+
+/* Liste des topics */
+.forum-topic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.forum-topic-item {
+    background-color: #1e1e1e;
+    margin-bottom: 10px;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    padding: 10px;
+}
+.forum-topic-item .topic-title {
+    font-weight: bold;
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 18px;
+}
+.forum-topic-item .topic-title:hover {
+    color: #ff007f;
+    text-shadow: 0 0 5px #ff007f;
+}
+.topic-meta {
+    font-size: 14px;
+    color: #ff007f;
+    margin-top: 5px;
+}
+
+/* Page view_topic : forum-post */
+.forum-post {
+    background-color: #1e1e1e;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+}
+.post-header {
+    margin: 0;
+    font-weight: bold;
+    color: #ff007f;
+}
+.post-date {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #ff66b2;
+}
+.post-message {
+    margin-top: 5px;
+    color: #00ff00;
+}
+
+/* Formulaire de réponse */
+.forum-reply-form textarea {
+    width: 100%;
+    background-color: #222;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    padding: 10px;
+}
+.forum-reply-form button {
+    background-color: #ff007f;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.forum-reply-form button:hover {
+    background-color: #ff66b2;
+    box-shadow: 0 0 5px #ff007f;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .forum-new-topic input[type="text"] {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .forum-reply-form textarea {
+        width: 100%;
+    }
+}

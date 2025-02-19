@@ -34,6 +34,8 @@ if (session_status() === PHP_SESSION_NONE) {
 
                 <!-- NOUVEAU : lien Forum -->
                 <a href="forum.php">Forum</a>
+                <a href="profile.php">Mon Profil</a>
+
 
                 <a href="logout.php">Se Déconnecter</a>
             <?php endif; ?>
